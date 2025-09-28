@@ -1,5 +1,5 @@
 let isModalOpen = false;
-let contrastToggle = false;
+let contrastToggle = true;
 const scaleFactor = 1 / 20;
 
 function moveBackground(event) {
@@ -19,7 +19,7 @@ function moveBackground(event) {
 function toggleContrast() {
   contrastToggle = !contrastToggle;
   if (contrastToggle) {
-    document.body.classList += " dark-theme";
+    document.body.classList.add("dark-theme");
   } else {
     document.body.classList.remove("dark-theme");
   }
