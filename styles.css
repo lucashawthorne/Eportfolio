@@ -639,7 +639,7 @@ footer {
 }
 
 .footer__logo--img {
-  width: 70px;
+  width: 90px;
 }
 
 .footer__social--list {
@@ -657,6 +657,27 @@ footer {
 
 .footer__copyright {
   margin-top: 10px;
+}
+
+.footer__logo--popper {
+    position: absolute;
+    color: white;
+    right: 0;
+    top: 36px;
+    font-weight: 700;
+    margin-right: 8px;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.footer__anchor {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.footer__anchor:hover .footer__logo--popper {
+    transform: translateX(60px);
+    opacity: 1;
 }
 
 /*
