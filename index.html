@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/b9c31cd09a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "dAv9S0dKr0B80aB2M",
+        });
+      })();
+    </script>
+  </head>
+
+  <body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+      <nav>
+        <figure>
+          <img id="personal-logo" src="./assets/Simple LH Logo.png" alt="" />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect"
+              >About</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link click" onclick="toggleContrast()">
+            <a href="#" class="nav__link--anchor"
+              ><i class="fa-solid fa-circle-half-stroke"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hey,</h1>
+          <h1 class="title"><span class="gold">I'm Lucas.</span></h1>
+          <p class="header__para">
+            I'm a <b class="gold">frontend software engineer</b> with a strong
+            passion for building stellar web applications that leave viewers
+            amazed.
+            <br />
+            Here's a bit more
+            <b class="gold click" onclick="toggleModal()">about me</b>.
+          </p>
+          <div class="social__list">
+            <a
+              href="https://linkedin.com/in/thelucashawthorne"
+              target="_blank"
+              class="social__link light-click"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/lucashawthorne/"
+              target="_blank"
+              class="social__link light-click"
+            >
+              <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a
+              href="./assets/David Bragg Resume.pdf"
+              class="social__link light-click"
+              target="_blank"
+            >
+              <i class="fa-regular fa-file"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <a href="#">
+        <button class="mail__btn light-click" onclick="toggleModal()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <figure class="picture__wrapper">
+            <figure class="about-me__picture--mask">
+              <img
+                src="./assets/profile.jpg"
+                class="about-me__picture"
+                alt="Picture of me"
+              />
+            </figure>
+          </figure>
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm a <b class="gold">Frontend Software Engineer</b> with a strong
+            passion for building stellar web applications that provide pleasant
+            user experiences and leave viewers amazed.<br />I <b class="gold">thrive</b> on tackling difficult
+            engineering problems. Troubleshooting and being
+            <b class="gold">devoted</b> to providing the
+            <b class="gold">best</b> user experiences possible are things I take
+            pride in.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/css-131-722685.webp"
+                alt=""
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/javascript-1-225993.webp"
+                alt=""
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/react-3-1175109.webp"
+                alt=""
+              />
+              <span class="language__name">React</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'm currently <b class="gold">open</b> to new opportunities.
+          </h4>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea
+                class="input"
+                name="message"
+                type="text"
+                required
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Connect with me
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            🚀 Thanks for your message!<br />I'll be in touch with you soon.
+          </div>
+        </div>
+      </div>
+      <img src="./assets/semi circle.svg" class="shape shape--0" />
+      <img src="./assets/circle.svg" class="shape shape--1" />
+      <img src="./assets/squiggly.svg" class="shape shape--2" />
+      <img src="./assets/triangle.svg" class="shape shape--3" />
+      <img src="./assets/semi circle.svg" class="shape shape--4" />
+      <img src="./assets/circle.svg" class="shape shape--5" />
+      <img src="./assets/squiggly.svg" class="shape shape--6" />
+      <img src="./assets/triangle.svg" class="shape shape--7" />
+      <img src="./assets/semi circle.svg" class="shape shape--8" />
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="gold">projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/treact website screenshot.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Treact Website</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    A stunning React templates website with a beautifully
+                    decorated homepage.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/lucashawthorne/Treact-Website-Project"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-brands fa-square-github click"></i>
+                    </a>
+                    <a
+                      href="https://lucashawthorne.github.io/Treact-Website-Project/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-solid fa-link click"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/fes library screenshot.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Library Project</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    A minimalist, online library with ratings and prices for
+                    various books.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/lucashawthorne/1995-Library-Project"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-brands fa-square-github click"></i>
+                    </a>
+                    <a
+                      href="https://lucashawthorne.github.io/1955-Library-Project/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-solid fa-link click"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <figure>
+            <img
+              src="./assets/Simple LH Logo.png"
+              class="footer__logo--img"
+              alt=""
+            />
+          </figure>
+          <div class="footer__social--list">
+            <a
+              href="https://github.com/lucashawthorne/"
+              target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >GitHub</a
+            >
+            <a
+              href="https://linkedin.com/in/thelucashawthorne"
+              target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >LinkedIn</a
+            >
+            <a
+              href="#"
+              onclick="toggleModal()"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Contact</a
+            >
+            <a
+              href="./assets/David Bragg Resume.pdf"
+              target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Resume</a
+            >
+          </div>
+          <div class="footer__copyright">Copyright © 2025 Lucas Hawthorne</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
