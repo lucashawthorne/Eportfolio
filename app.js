@@ -6,13 +6,19 @@ function moveBackground(event) {
   const shapes = document.querySelectorAll(".shape");
   const centerX = window.innerWidth / 2;
   const centerY = window.innerHeight / 2;
+
+  // Cursor position relative to center of screen
   const offsetX = (event.clientX - centerX) * scaleFactor;
   const offsetY = (event.clientY - centerY) * scaleFactor;
 
   for (let i = 0; i < shapes.length; ++i) {
     const isOdd = i % 2 !== 0;
     const boolInt = isOdd ? -1 : 1;
-    shapes[i].style.transform = `translate(${offsetX * boolInt}px, ${offsetY * boolInt}px)`;
+
+    shapes[i].style.transform = `
+      translate(${offsetX * boolInt}px, ${offsetY * boolInt}px)
+      rotate(${offsetX * boolInt * 10}deg)
+    `;
   }
 }
 
