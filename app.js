@@ -17,7 +17,7 @@ function moveBackground(event) {
 
     shapes[i].style.transform = `
       translate(${offsetX * boolInt}px, ${offsetY * boolInt}px)
-      rotate(${offsetX * boolInt * 10}deg)
+      rotate(${offsetX * boolInt * 15}deg)
     `;
   }
 }
