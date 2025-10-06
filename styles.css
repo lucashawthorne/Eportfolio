@@ -554,9 +554,6 @@ MODAL
     50% {
         transform: rotate(0);
     }
-    100% {
-        transform: rotate(0);
-    }
 }
 
 /*
