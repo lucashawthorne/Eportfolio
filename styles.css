@@ -539,6 +539,26 @@ MODAL
   justify-content: center;
 }
 
+.wave {
+    display: inline-block;
+    animation: animate-wave 3000ms ease-in-out infinite;
+}
+
+@keyframes animate-wave {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(60deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
 /*
 
 PROJECTS
