@@ -764,6 +764,14 @@ SHAPES
   .modal__half {
     width: 100%;
   }
+
+  .project__wrapper {
+    height: 417px;
+  }
+
+  .project__description {
+    left: 80px;
+  }
 }
 
 @media (max-width: 480px) {
