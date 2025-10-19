@@ -570,6 +570,7 @@ PROJECTS
 
 .project__img {
   width: 100%;
+  height: 100%;
   transition: transform 400ms ease, filter 400ms ease;
 }
 
