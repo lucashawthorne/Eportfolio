@@ -580,6 +580,7 @@ PROJECTS
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
   overflow: hidden;
   margin-bottom: 64px;
+  max-height: 610px;
 }
 
 .project__wrapper:hover .project__description {
