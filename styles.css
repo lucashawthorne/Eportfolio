@@ -774,6 +774,20 @@ SHAPES
   .project__description {
     left: 80px;
   }
+
+  .project__wrapper .project__description {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+
+  .project__wrapper .project__img {
+    transform: scale(1.07);
+    filter: blur(5px);
+  }
+
+  .project__wrapper .project__wrapper--bg {
+    opacity: 0.7;
+  }
 }
 
 @media (max-width: 480px) {
@@ -786,6 +800,10 @@ SHAPES
   .nav__link:first-child {
     display: none;
   }
+  .project__wrapper {
+    max-height: 320px;
+  }
+
   .project__description--para {
     display: none;
   }
