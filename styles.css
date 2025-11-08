@@ -562,6 +562,10 @@ PROJECTS
 
 */
 
+#projects {
+  overflow: visible;
+}
+
 .section__title {
   text-align: center;
   font-size: 48px;

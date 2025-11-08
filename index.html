@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lucas Hawthorne's Eportfolio</title>
     <link rel="icon" type="image/png" href="./assets/outlined LH logo.png" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/b9c31cd09a.js"
@@ -227,12 +228,12 @@
     <section id="projects">
       <div class="container">
         <div class="row">
-          <h1 class="section__title">
+          <h1 data-aos="fade-up" data-aos-offset="10" data-aos-duration="1000" class="section__title">
             Here are some of my <span class="gold">projects</span>
           </h1>
           <ul class="project__list">
             <li class="project">
-              <div class="project__wrapper">
+              <div data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" class="project__wrapper">
                 <img
                   src="./assets/ultraverse screenshot.png"
                   class="project__img"
@@ -241,7 +242,7 @@
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
                   <h3 class="project__description--title">
-                    Ultraverse Marketplace
+                    Ultraverse NFT Marketplace
                   </h3>
                   <h4 class="project__description--sub-title">
                     React, JavaScript Html, CSS
@@ -270,7 +271,9 @@
                   </div>
                 </div>
               </div>
-              <div class="project__wrapper">
+            </li>
+            <li class="project">
+              <div data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" class="project__wrapper">
                 <img
                   src="./assets/netflix clone screenshot.png"
                   class="project__img"
@@ -307,7 +310,7 @@
               </div>
             </li>
             <li class="project">
-              <div class="project__wrapper">
+              <div data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" class="project__wrapper">
                 <img
                   src="./assets/reelz screenshot.png"
                   class="project__img"
@@ -344,7 +347,7 @@
               </div>
             </li>
             <li class="project">
-              <div class="project__wrapper">
+              <div data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" class="project__wrapper">
                 <img
                   src="./assets/react library screenshot.png"
                   class="project__img"
@@ -383,7 +386,7 @@
               </div>
             </li>
             <li class="project">
-              <div class="project__wrapper">
+              <div data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" class="project__wrapper">
                 <img
                   src="./assets/treact website screenshot.png"
                   class="project__img"
@@ -469,5 +472,15 @@
         </div>
       </div>
     </footer>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- Initialize AOS -->
+    <script>
+      AOS.init({
+        duration: 800, // animation duration (in ms)
+        easing: "ease", // animation easing
+        once: true, // whether animation should happen only once
+      });
+    </script>
   </body>
 </html>
