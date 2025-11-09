@@ -825,3 +825,8 @@ SHAPES
     padding: 40px;
   }
 }
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
